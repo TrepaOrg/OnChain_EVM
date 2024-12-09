@@ -3,4 +3,25 @@ src = "src"
 out = "out"
 libs = ["lib"]
 
+bytecode_hash = 'none'
+optimizer = false
+solc_version = '0.8.20'
+
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/"
+]
+
+
+[rpc_endpoints]
+mainnet = "XXX"
+badnet = "${BADNET_RPC}"
+
+[etherscan]
+mainnet={key="${ETHERSCAN_API_KEY}"}
+sepolia={key="${ETHERSCAN_API_KEY}"}
+
+
+#[blockscout]
+#badnet="https://blockscout.badnet.mitosis.org/api"
+
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
