@@ -2,11 +2,12 @@
 src = "src"
 out = "out"
 libs = ["lib"]
-
+optimizer = true
+optimizer_runs = 200
 bytecode_hash = 'none'
-optimizer = false
-solc_version = '0.8.20'
-
+solc_version = '0.8.26'
+chain_id = 124864
+evm_version = "paris"
 remappings = [
     "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/"
 ]
@@ -15,6 +16,7 @@ remappings = [
 [rpc_endpoints]
 mainnet = "XXX"
 badnet = "${BADNET_RPC}"
+sepolia = "${ALCHEMY_T}"
 
 [etherscan]
 mainnet={key="${ETHERSCAN_API_KEY}"}
