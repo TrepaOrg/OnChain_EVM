@@ -9,8 +9,8 @@ forge verify-contract \
   --watch \
 
 
-forge script script/Counter.s.sol --broadcast --rpc-url badnet --account DEV \
+forge script script/AccountImpl.s.sol:AccountScript --broadcast --rpc-url badnet --account DEV \
 --verify --verifier blockscout --verifier-url "https://blockscout.badnet.mitosis.org/api" --optimizer-runs 200
 
-forge script script/Counter.s.sol --broadcast --rpc-url sepolia --account DEV \
+forge script script/AccountImpl.s.sol --broadcast --rpc-url sepolia --account DEV \
 --verify --verifier-url "https://api-sepolia.etherscan.io/api" --optimizer-runs 200
