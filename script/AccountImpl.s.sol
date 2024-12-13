@@ -2,15 +2,15 @@
 pragma solidity ^0.8.20;
 
 import {Script, console} from "forge-std/Script.sol";
-import {Counter} from "../src/Counter.sol";
+import {Safe} from "@gnosis/safe-contracts/Safe.sol";
 
-contract CounterScript is Script {
-    Counter public counter;
+contract AccountScript is Script {
+    Safe public account;
 
     function run() public {
         vm.startBroadcast();
 
-        counter = new Counter();
+        account = new Safe();
 
         vm.stopBroadcast();
     }
