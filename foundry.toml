@@ -9,7 +9,8 @@ solc_version = '0.8.26'
 chain_id = 124864
 evm_version = "paris"
 remappings = [
-    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/"
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@gnosis/safe-contracts/=lib/safe-contracts/contracts/"
 ]
 
 
