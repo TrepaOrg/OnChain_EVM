@@ -14,3 +14,10 @@ forge script script/AccountImpl.s.sol:AccountScript --broadcast --rpc-url badnet
 
 forge script script/AccountImpl.s.sol --broadcast --rpc-url sepolia --account DEV \
 --verify --verifier-url "https://api-sepolia.etherscan.io/api" --optimizer-runs 200
+
+forge script script/ProxyFactory.s.sol --broadcast --rpc-url sepolia --account DEV \
+--verify --verifier-url "https://api-sepolia.etherscan.io/api" --optimizer-runs 200
+
+
+forge script script/ProxyFactory.s.sol --broadcast --rpc-url mantle_testnet --account DEV \
+--verify --verifier-url https://api-sepolia.mantlescan.xyz/api
