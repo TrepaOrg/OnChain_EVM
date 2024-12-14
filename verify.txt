@@ -20,4 +20,13 @@ forge script script/ProxyFactory.s.sol --broadcast --rpc-url sepolia --account D
 
 
 forge script script/ProxyFactory.s.sol --broadcast --rpc-url mantle_testnet --account DEV \
---verify --verifier-url https://api-sepolia.mantlescan.xyz/api
+--verify --verifier-url https://api-sepolia.mantlescan.xyz/api --etherscan-api-key mantle_testnet
+
+forge verify-contract \
+  --rpc-url mantle_testnet \
+  --verifier-url 'https://api-sepolia.mantlescan.xyz/api' \
+  --verifier etherscan \
+  --etherscan-api-key mantle_testnet \
+  0x3769cc9680d98EcF13D6a153Dd612F5Ac87B1379 \
+  lib/safe-contracts/contracts/proxies/SafeProxy.sol:SafeProxy \
+  --watch
