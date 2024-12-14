@@ -6,7 +6,6 @@ optimizer = true
 optimizer_runs = 200
 bytecode_hash = 'none'
 solc_version = '0.8.26'
-chain_id = 124864
 evm_version = "paris"
 remappings = [
     "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
@@ -18,11 +17,12 @@ remappings = [
 mainnet = "XXX"
 badnet = "${BADNET_RPC}"
 sepolia = "${ALCHEMY_T}"
+mantle_testnet = "${MANTLE_TESTNET_RPC}"
 
 [etherscan]
-mainnet={key="${ETHERSCAN_API_KEY}"}
-sepolia={key="${ETHERSCAN_API_KEY}"}
-
+mainnet={ key = "${ETHERSCAN_API_KEY}"}
+sepolia={ key = "${ETHERSCAN_API_KEY}"}
+mantle_testnet={ key = "${MANTLESCAN_API_KEY}"}
 
 #[blockscout]
 #badnet="https://blockscout.badnet.mitosis.org/api"
